@@ -1,0 +1,49 @@
+@page
+@model hii.Pages_Movies.CreateModel
+
+@{
+    ViewData["Title"] = "lau' joyas";
+}
+
+<h1>lista de productos</h1>
+
+<h4>coleccion</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Movie.productos" class="control-label"></label>
+                <input asp-for="Movie.productos" class="form-control" />
+                <span asp-validation-for="Movie.productos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Movie.fecha" class="control-label"></label>
+                <input asp-for="Movie.fecha" class="form-control" />
+                <span asp-validation-for="Movie.fecha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Movie.cantidad" class="control-label"></label>
+                <input asp-for="Movie.cantidad" class="form-control" />
+                <span asp-validation-for="Movie.cantidad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Movie.Precio" class="control-label"></label>
+                <input asp-for="Movie.Precio" class="form-control" />
+                <span asp-validation-for="Movie.Precio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
